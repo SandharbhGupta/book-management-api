@@ -44,6 +44,10 @@ The project follows a service-based architecture:
 | DELETE | /api/books/:id | Delete a book |
 | POST | /api/books/import | Import books from CSV file |
 
+## 📦 Postman Collection
+
+[📁 Download Collection (JSON)](https://github.com/SandharbhGupta/book-management-api/blob/main/Book_Managment_API.postman_collection.json)
+
 ## Getting Started
 
 1. Clone the repository
