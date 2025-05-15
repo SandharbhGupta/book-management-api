@@ -4,13 +4,15 @@ A Node.js and TypeScript REST API for managing books with CRUD operations and bu
 
 ## Features
 
-- Complete CRUD operations for books
-- Bulk import of books via CSV with validation
-- TypeScript for type safety
-- Centralized error handling
-- Request logging with Morgan
-- Unit tests with Jest
-- Environment variable configuration
+- Full CRUD API (Create, Read, Update, Delete) for books
+- CSV bulk import with manual validation
+- Logging with `morgan`
+- Centralized error handling middleware
+- Uses UUIDs for book IDs
+- Type-safe development with TypeScript
+- Simple in-memory data storage (no external database required)
+- Basic unit tests using `Jest`
+- Environment variable support with `dotenv`
 
 ## Project Structure
 
@@ -45,18 +47,38 @@ The project follows a service-based architecture:
 | POST | /api/books/import | Import books from CSV file |
 
 ## 📦 Postman Collection
-
+You can import this Postman collection to test all endpoints:
 [📁 Download Collection (JSON)](https://github.com/SandharbhGupta/book-management-api/blob/main/Book_Managment_API.postman_collection.json)
+
+To import:
+1. Open Postman.
+2. Click Import → Upload the file.
+3. Use the localhost:3000 base URL.
 
 ## Getting Started
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run in development mode: `npm run dev`
-4. Run tests: `npm test`
-5. Build for production: `npm run build`
+1. Clone the repository:
+   git clone https://github.com/SandharbhGupta/book-management-api.git
+   cd book-management-api
+2. Install dependencies:
+   npm install
+3. Run in development mode:
+   npm run dev
+6. Run tests:
+   npm test
+8. Build for production:
+   npm run build
+   npm start
+##  Example JSON for Create/Update
+```
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "publishedYear": 2008
+}
+```
 
-## CSV Import Format
+##  Example CSV Import Format
 
 The CSV file for bulk import should have the following structure:
 
@@ -67,3 +89,19 @@ Book Title 2,Author Name 2,2021
 ```
 
 Each row will be validated for proper format and data.
+
+🛠 Technologies Used
+- Node.js
+- TypeScript
+- Express.js
+- Multer (for file upload)
+- Morgan (for logging)
+- Jest (for testing)
+- dotenv
+
+📌 Notes
+- This project uses in-memory storage (no database) to focus on core logic.
+- You can replace the service layer to connect with a DB if needed.
+
+👨‍💻 Author
+Developed by Sandharbh Gupta for Creuto Interview Task.
