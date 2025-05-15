@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "de18007f-cd1d-4945-aa2e-2ec14351b8dd",
+		"name": "Book Managment API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44962258"
+	},
+	"item": [
+		{
+			"name": "Get details of a specific book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/books/78f80b2d-c281-4c72-a471-2bf00dd81135",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						"78f80b2d-c281-4c72-a471-2bf00dd81135"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of all books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Atomic\",\r\n  \"author\": \"James\",\r\n  \"publishedYear\": 2018\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Atomic Habits\",\r\n  \"author\": \"James Clear\",\r\n  \"publishedYear\": 2018\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books/1fb32ea0-08d7-466d-8aec-d93ff45764a3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						"1fb32ea0-08d7-466d-8aec-d93ff45764a3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Hobbit\",\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"publishedYear\":\"1937\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books/5a575a65-c9c8-4531-ac96-e658422da8cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						"5a575a65-c9c8-4531-ac96-e658422da8cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Import with Validation using csv",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1f030eb7-1e53-4560-a01a-eaea561bf9a7"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/books/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books",
+						"import"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
