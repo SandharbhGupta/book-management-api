@@ -94,8 +94,9 @@ The CSV file for bulk import should have the following structure:
 
 ```
 title,author,publishedYear
-Book Title 1,Author Name 1,2020
-Book Title 2,Author Name 2,2021
+Ulysses,James Joyce,1927
+Waste Land,T.S Eliot,2010
+Treasure Island , R.L. Stevenson, 2002
 ```
 
 Each row will be validated for proper format and data.
