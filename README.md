@@ -57,18 +57,28 @@ To import:
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository
+   ```
    git clone https://github.com/SandharbhGupta/book-management-api.git
    cd book-management-api
-2. Install dependencies:
+   ```
+3. Install dependencies
+   ```
    npm install
-3. Run in development mode:
+   ```
+5. Run in development mode
+   ```
    npm run dev
-6. Run tests:
+   ```
+7. Run tests
+   ```
    npm test
-8. Build for production:
+   ```
+9. Build for production
+    ```
    npm run build
    npm start
+    ```
 ##  Example JSON for Create/Update
 ```
 {
